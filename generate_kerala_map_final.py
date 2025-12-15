@@ -5,8 +5,8 @@ from shapely.geometry import shape, mapping, Polygon, MultiPolygon
 from shapely.ops import unary_union
 from shapely.validation import make_valid
 
-base_dir = Path("/Users/devandev/Downloads/Reults map db/kerala_lb_by_org_district")
-csv_dir = Path("/Users/devandev/Downloads/Reults map db")
+base_dir = Path(__file__).parent / "kerala_lb_by_org_district"
+csv_dir = Path(__file__).parent
 
 districts = [
     "Alappuzha North", "Alappuzha South", "Ernakulam City", "Ernakulam East", "Ernakulam North",
@@ -1123,10 +1123,17 @@ html_content = '''<!DOCTYPE html>
         }
         
         .trend-votes {
-            width: 120px;
+            width: 110px;
             text-align: right;
             font-size: 12px;
             color: #666;
+        }
+        .trend-percent {
+            width: 60px;
+            text-align: right;
+            font-size: 12px;
+            color: #333;
+            margin-right: 10px;
         }
         
         .lb-grid {
@@ -1559,28 +1566,25 @@ html_content = '''<!DOCTYPE html>
                     <div class="trend-row">
                         <div class="trend-year">2020</div>
                         <div class="trend-bar-container">
-                            <div class="trend-bar y2020" style="width: ${Math.min(avgVoteShare2020 * 2, 100)}%">
-                                ${avgVoteShare2020.toFixed(2)}%
-                            </div>
+                            <div class="trend-bar y2020" style="width: ${Math.min(avgVoteShare2020 * 2, 100)}%"></div>
                         </div>
+                        <div class="trend-percent">${avgVoteShare2020.toFixed(2)}%</div>
                         <div class="trend-votes">${formatNumber(totalVotes2020)} votes</div>
                     </div>
                     <div class="trend-row">
                         <div class="trend-year">2024</div>
                         <div class="trend-bar-container">
-                            <div class="trend-bar y2024" style="width: ${Math.min(avgVoteShare2024 * 2, 100)}%">
-                                ${avgVoteShare2024.toFixed(2)}%
-                            </div>
+                            <div class="trend-bar y2024" style="width: ${Math.min(avgVoteShare2024 * 2, 100)}%"></div>
                         </div>
+                        <div class="trend-percent">${avgVoteShare2024.toFixed(2)}%</div>
                         <div class="trend-votes">${formatNumber(totalVotes2024)} votes</div>
                     </div>
                     <div class="trend-row">
                         <div class="trend-year">2025</div>
                         <div class="trend-bar-container">
-                            <div class="trend-bar y2025" style="width: ${Math.min(avgVoteShare2025 * 2, 100)}%">
-                                ${avgVoteShare2025.toFixed(2)}%
-                            </div>
+                            <div class="trend-bar y2025" style="width: ${Math.min(avgVoteShare2025 * 2, 100)}%"></div>
                         </div>
+                        <div class="trend-percent">${avgVoteShare2025.toFixed(2)}%</div>
                         <div class="trend-votes">${formatNumber(totalVotes2025)} votes</div>
                     </div>
                 </div>
@@ -1599,12 +1603,12 @@ html_content = '''<!DOCTYPE html>
                     <div class="summary-cards" style="grid-template-columns: repeat(2, 1fr); max-width: 600px; margin: 0 auto;">
                         <div class="summary-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333;">
                             <div class="value">${localBody2ndNoTie}</div>
-                            <div class="label">Local Body Won (2nd)</div>
+                            <div class="label">Local Body Opposition</div>
                             <div class="change">Without Tie</div>
                         </div>
                         <div class="summary-card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #333;">
                             <div class="value">${localBody2ndWithTie}</div>
-                            <div class="label">Local Body Won (2nd)</div>
+                            <div class="label">Local Body Opposition</div>
                             <div class="change">With Tie</div>
                         </div>
                     </div>
@@ -1697,7 +1701,7 @@ html_content = '''<!DOCTYPE html>
 </html>
 '''
 
-output_path = Path("/Users/devandev/Downloads/Reults map db/kerala_map_final.html")
+output_path = Path(__file__).parent / "kerala_map_final.html"
 with open(output_path, 'w', encoding='utf-8') as f:
     f.write(html_content)
 
