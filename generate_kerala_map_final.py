@@ -132,8 +132,10 @@ def merge_features_to_boundary(features):
             merged = merged.buffer(0.003).buffer(-0.001)
             merged = remove_holes(merged)
         
-        centroid = merged.centroid
-        return merged, centroid
+        # Use representative_point instead of centroid so the label
+        # is guaranteed to fall inside the polygon (better visual centering)
+        label_point = merged.representative_point()
+        return merged, label_point
     except Exception as e:
         print(f"    Error: {e}")
         return None, None
@@ -257,7 +259,7 @@ for district_name in districts:
         print(f"  - {len(features)} features")
         print(f"  - Local Bodies: {len(local_bodies['panchayat'])} Panchayats, {len(local_bodies['municipality'])} Municipalities, {len(local_bodies['corporation'])} Corporations")
         
-        merged_boundary, centroid = merge_features_to_boundary(features)
+        merged_boundary, label_point = merge_features_to_boundary(features)
         
         if merged_boundary and not merged_boundary.is_empty:
             merged_geojson = {
@@ -462,7 +464,9 @@ for district_name in districts:
             all_districts_data.append({
                 "name": district_name,
                 "geojson": merged_geojson,
-                "centroid": [centroid.x, centroid.y] if centroid else None,
+                # Keep the key name as "centroid" for the frontend,
+                # but the value is now an interior label point
+                "centroid": [label_point.x, label_point.y] if label_point else None,
                 "csvData": district_csv,
                 "voteShareData": vote_share_data,
                 "totalLocalBodiesWon": total_local_bodies_won,
