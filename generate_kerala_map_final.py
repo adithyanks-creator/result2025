@@ -1379,19 +1379,6 @@ html_content = '''<!DOCTYPE html>
                 'Thiruvananthapuram South': '#FF9FF3'
             };
 
-            const info = L.control({ position: 'topright' });
-            info.onAdd = function(map) {
-                this._div = L.DomUtil.create('div', 'info');
-                this.update();
-                return this._div;
-            };
-            info.update = function(props) {
-                this._div.innerHTML = '<h4>🗺️ Kerala Districts</h4>' + 
-                    (props ? '<p><strong style="color: ' + (colorMapping[props.name] || '#333') + ';">' + props.name + '</strong></p><p style="font-size:12px; color:#888;">Click for details</p>'
-                           : '<p style="color: #888;">Hover over a district</p>');
-            };
-            info.addTo(map);
-
         const districtLayers = {};
         const labelMarkers = [];
         let allBounds = null;
@@ -1405,12 +1392,10 @@ html_content = '''<!DOCTYPE html>
         function highlightFeature(e) {
             e.target.setStyle({ weight: 3, color: '#333', fillOpacity: 1 });
             e.target.bringToFront();
-            info.update(e.target.feature.properties);
         }
 
         function resetHighlight(e, name) {
             e.target.setStyle(getStyle(name));
-            info.update();
         }
 
         function formatNumber(num) {
