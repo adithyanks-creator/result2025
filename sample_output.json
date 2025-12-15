@@ -1,0 +1,271 @@
+{
+  "Alappuzha North": {
+    "panchayat": {
+      "first_without_tie": {
+        "count": 1,
+        "vote_share": {
+          "2025": "34.44%",
+          "2024": "21.40%",
+          "2020": "28.60%"
+        }
+      },
+      "first_tie": {
+        "count": 2,
+        "vote_share": {
+          "2025": "28.92%",
+          "2024": "22.10%",
+          "2020": "21.18%"
+        }
+      },
+      "second_without_tie": {
+        "count": 4,
+        "vote_share": {
+          "2025": "24.77%",
+          "2024": "26.70%",
+          "2020": "22.83%"
+        }
+      },
+      "second_tie": {
+        "count": 1,
+        "vote_share": {
+          "2025": "19.84%",
+          "2024": "29.10%",
+          "2020": "17.83%"
+        }
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "18.76%",
+          "2024": "21.97%",
+          "2020": "16.37%"
+        }
+      }
+    },
+    "municipality": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_with_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "15.75%",
+          "2024": "25.35%",
+          "2020": "14.74%"
+        }
+      }
+    },
+    "corporation": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": null
+      }
+    }
+  },
+  "Alappuzha South": {
+    "panchayat": {
+      "first_without_tie": {
+        "count": 4,
+        "vote_share": {
+          "2025": "32.54%",
+          "2024": "26.95%",
+          "2020": "30.39%"
+        }
+      },
+      "first_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 5,
+        "vote_share": {
+          "2025": "29.73%",
+          "2024": "23.38%",
+          "2020": "27.15%"
+        }
+      },
+      "second_tie": {
+        "count": 3,
+        "vote_share": {
+          "2025": "23.64%",
+          "2024": "25.40%",
+          "2020": "20.75%"
+        }
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "24.18%",
+          "2024": "26.92%",
+          "2020": "22.05%"
+        }
+      }
+    },
+    "municipality": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 2,
+        "vote_share": {
+          "2025": "26.24%",
+          "2024": "24.94%",
+          "2020": "23.94%"
+        }
+      },
+      "second_with_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "23.82%",
+          "2024": "29.57%",
+          "2020": "21.40%"
+        }
+      }
+    },
+    "corporation": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": null
+      }
+    }
+  },
+  "Ernakulam City": {
+    "panchayat": {
+      "first_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "first_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "11.46%",
+          "2024": "12.33%",
+          "2020": "10.54%"
+        }
+      }
+    },
+    "municipality": {
+      "first": {
+        "count": 1,
+        "vote_share": {
+          "2025": "15.50%",
+          "2024": "20.03%",
+          "2020": "12.67%"
+        }
+      },
+      "second_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_with_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "15.50%",
+          "2024": "20.03%",
+          "2020": "12.67%"
+        }
+      }
+    },
+    "corporation": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "14.41%",
+          "2024": "17.82%",
+          "2020": "10.98%"
+        }
+      }
+    }
+  },
+  "Thiruvananthapuram City": {
+    "panchayat": {
+      "first_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "first_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": null
+      }
+    },
+    "municipality": {
+      "first": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_without_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "second_with_tie": {
+        "count": 0,
+        "vote_share": null
+      },
+      "overall": {
+        "vote_share": null
+      }
+    },
+    "corporation": {
+      "first": {
+        "count": 1,
+        "vote_share": {
+          "2025": "34.52%",
+          "2024": "40.90%",
+          "2020": "30.60%"
+        }
+      },
+      "overall": {
+        "vote_share": {
+          "2025": "34.52%",
+          "2024": "40.90%",
+          "2020": "30.60%"
+        }
+      }
+    }
+  }
+}
+
