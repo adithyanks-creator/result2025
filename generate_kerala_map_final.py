@@ -399,9 +399,10 @@ for district_name in districts:
                 }
                 vote_share_data["corporation"]["first"]["vote_share"] = vote_share_data["corporation"]["overall"]["vote_share"]
             
-            # Calculate Local Body Won (only First positions: GP First Without Tie + Municipality First + Corporation 1st)
+            # Calculate Local Body Won (First positions: GP First Without Tie + GP First Tie + Municipality First + Corporation 1st)
             local_body_won = (
                 int(district_result.get('gp_first_no_tie', '0') or '0') +
+                int(district_result.get('gp_first_tie', '0') or '0') +
                 int(district_result.get('municipality_first', '0') or '0') +
                 int(district_result.get('corporation_1st', '0') or '0')
             )
@@ -586,9 +587,10 @@ for district_name in districts:
                 }
                 vote_share_data["corporation"]["first"]["vote_share"] = vote_share_data["corporation"]["overall"]["vote_share"]
             
-            # Calculate Local Body Won (only First positions: GP First Without Tie + Municipality First + Corporation 1st)
+            # Calculate Local Body Won (First positions: GP First Without Tie + GP First Tie + Municipality First + Corporation 1st)
             local_body_won = (
                 int(district_result.get('gp_first_no_tie', '0') or '0') +
+                int(district_result.get('gp_first_tie', '0') or '0') +
                 int(district_result.get('municipality_first', '0') or '0') +
                 int(district_result.get('corporation_1st', '0') or '0')
             )
