@@ -1325,7 +1325,7 @@ html_content = '''<!DOCTYPE html>
 <body>
     <header class="page-header">
         <h1>🎯 Mission 2025 Results</h1>
-        <p>Kerala Organizational Districts | Click for Details</p>
+        <p>Kerala Organizational Districts</p>
     </header>
     <div id="map"></div>
     
